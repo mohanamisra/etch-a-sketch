@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <title>Etch-A-Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <script src = "app.js" defer>
+    </script>
+</head>
+<body>
+    <div class = "header text"><h1>    Etch-A-Sketch!   <h1> </div>
+    <div class = "etch-a-sketch">
+    <div class = "instructions text"> Enter a value between 1 and 100 to create a grid of that size, and then draw away!</div>
+    <div class = "play-area">
+    <div class = "right-side">
+    <button id = "black" class = "text colours right"> Black </button>
+    <button id = "white" class = "text colours right"> White </button>
+    <button id = "red" class = "text colours right"> Red </button>
+    <button id = "green" class = "text colours right"> Green </button>
+    <button id = "blue" class = "text colours right"> Blue </button>
+    <button id = "colour-button" class = "text right"> Surprise Me! </button>
+    <input type = "number" id = "set-grid" class = "text right" value = 16></input>
+    </div>
+    <div id = "container"></div>
+</div>
+    <button id = "button" class = "text">CLEAR GRID</button>
+    </div>
+</body>
+</html>
