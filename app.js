@@ -18,6 +18,16 @@ function makeGrid(cellNum) {
         cell.style.backgroundColor = "black";
     });
 }
+for(const cell of cells) {
+    cell.addEventListener("touchmove", function (e) {
+        e.preventDefault();
+        let myLocation = e.changedTouches[0];
+        let realTarget = document.elementFromPoint(myLocation.clientX, myLocation.clientY);
+        if(realTarget.classList.contains("cell")) {
+            realTarget.style.backgroundColor = "black";
+        }
+    })
+} 
 }
 
 let cells = document.getElementsByClassName("cell");
@@ -52,6 +62,17 @@ for(const colourButton of colourButtons) {
                 cell.style.backgroundColor = `${drawColour}`;
             })
         }
+        for(const cell of cells) {
+            cell.addEventListener("touchmove", function (e) {
+                e.preventDefault();
+                let myLocation = e.changedTouches[0];
+                let realTarget = document.elementFromPoint(myLocation.clientX, myLocation.clientY);
+                if(realTarget.classList.contains("cell")) {
+                    let drawColour = colourButton.getAttribute("id");
+                    realTarget.style.backgroundColor = `${drawColour}`;
+                }
+            })
+        }    
     })
 }
 
@@ -65,6 +86,17 @@ function draw(){
         cell.style.backgroundColor = randomColour;
     });
 }
+for(const cell of cells) {
+    cell.addEventListener("touchmove", function (e) {
+        e.preventDefault();
+        let myLocation = e.changedTouches[0];
+        let realTarget = document.elementFromPoint(myLocation.clientX, myLocation.clientY);
+        if(realTarget.classList.contains("cell")) {
+            let randomColour = generateRandomColour();
+            realTarget.style.backgroundColor = randomColour;
+        }
+    })
+}
     
 }
 
@@ -76,3 +108,6 @@ function generateRandomColour () {
     }
     return colour;
 }
+
+//Following is the support for touch-compatible devices
+
