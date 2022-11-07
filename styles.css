@@ -1,7 +1,37 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+.heading{
+    min-width: 100vw;
+    text-align: center;
+    font-size: 8rem;
+}
+
+.input-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.set-grid{
+    display: flex;
+    gap: 0.25rem;
+    height:fit-content;
+}
+
+.drawing-section{
+    min-width: 100vw;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 16rem;
+}
+
 .grid{
-    border: 1px solid black;
-    min-height: 500px;
-    max-width: 500px;
+    height: 500px; /*on problems, add min for height and max for width*/
+    width: 500px;
+    border: 1px solid white;
     display: flex;
 }
 
@@ -13,9 +43,33 @@
 
 .box{
     flex-grow: 1;
-    border: 1px solid black;
+    border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
 .hovered{
-    background-color: black;
+    background-color: white;
+    box-shadow: 1px 1px 50px 1px rgba(255, 255, 255, 50%);
+}
+
+.hoveredPurple{
+    background-color: rgb(150, 60, 214);
+    box-shadow: 1px 1px 50px 1px rgba(150, 60, 214, 50%);
+}
+
+#white{
+    background-color: white;
+    color: black;
+}
+
+#white:hover{
+    background-color: rgb(220, 220, 220);
+    box-shadow: 2px 2px 50px 1px rgba(255, 255, 255, 10%);
+}
+
+.btn:hover{
+    background-color: none;
+}
+
+.footer{
+    justify-content: center;
 }

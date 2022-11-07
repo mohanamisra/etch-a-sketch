@@ -26,7 +26,10 @@ function createGrid(cellNum){
                 //tells the document 'pen is up'.
             });
             box.addEventListener('mouseover', (e)=>{
-                hovered(e.target);
+                if(isPurple)
+                    hoveredPurple(e.target);
+                else
+                    hovered(e.target);
                 //if the box is hovered over then you pass that div to hovered and colour it. But hovered only colours if    mouseDown is true, i.e., only if th eprevious event listener (of mousedown) was fired on that div.
             });
             box.addEventListener('click', (e)=>{
@@ -36,7 +39,7 @@ function createGrid(cellNum){
         }
         grid.appendChild(column);
     }
-    document.body.appendChild(grid);
+    container.appendChild(grid);
 }
 
 function hovered(item){
@@ -46,6 +49,22 @@ function hovered(item){
 
 function clicked(item){
     item.classList.add("hovered");
+}
+
+//Get the colour buttons
+let whiteButton = document.getElementById("purple");
+let purpleButton = document.getElementById("purple");
+let pinkButton = document.getElementById("purple");
+let greenButton = document.getElementById("purple");
+let yellowButton = document.getElementById("purple");
+let redButton = document.getElementById("purple");
+let isPurple;
+purpleButton.addEventListener('click', ()=>{
+    isPurple = true;
+});
+
+function hoveredPurple(){
+    item.classList.add("hoveredPurple");
 }
 
 let input = document.getElementById("grid-size");
@@ -59,7 +78,12 @@ resizeButton.addEventListener('click', () => {
 
 function newGrid(gridSize){
     grid.innerHTML = "";
-    createGrid(gridSize);
+    if(gridSize < 1 || gridSize > 100){
+        alert("Input Error: Please enter a size between 1 and 100");
+        createGrid(16);
+    }
+    else
+        createGrid(gridSize);
 }
 
-createGrid(5);
+createGrid(16);
