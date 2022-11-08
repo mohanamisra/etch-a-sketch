@@ -1,6 +1,7 @@
 let grid = document.getElementById("grid");
 let cellNum = 0;
 let mouseDown = false;
+let gridSize;
 
 function createBox(){
     cell = document.createElement("div");
@@ -232,7 +233,10 @@ resizeButton.addEventListener('click', () => {
 });
 
 clearButton.addEventListener('click', ()=> {
-    newGrid(gridSize);
+    if(gridSize !== undefined)
+        newGrid(gridSize);
+    else
+        newGrid(16);
 });
 
 function newGrid(gridSize){

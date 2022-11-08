@@ -1,5 +1,28 @@
 /* Media queries start */
 
+@media(max-width: 768px){
+    html, body{
+        min-width: 768px;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .container{
+        min-height: 100%;
+    }
+
+    .input-section{
+        margin-left: -150px;
+    }
+    
+    .drawing-section{
+        flex-direction: column-reverse;
+        min-width: 100vw;
+        align-items: center;
+    }
+}
+
 /* Media queries end */
 
 html{
