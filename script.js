@@ -1,7 +1,7 @@
 let grid = document.getElementById("grid");
 let cellNum = 0;
 let mouseDown = false;
-let gridSize;
+let gridSize;   
 
 function createBox(){
     cell = document.createElement("div");
@@ -22,6 +22,20 @@ function createGrid(cellNum){
                 mouseDown = true;
                 //tells the document 'pen is down'.
             });
+            box.addEventListener('touchmove', (e) => {
+                if(isPurple)
+                    hoveredPurple(e.target);
+                else if(isGreen)
+                    hoveredGreen(e.target);
+                else if(isYellow)
+                    hoveredYellow(e.target);
+                else if(isRed)
+                    hoveredRed(e.target);
+                else if(isErase)
+                    hoveredErase(e.target);
+                else
+                    hoveredWhite(e.target);
+            })
             box.addEventListener('mouseup', (e)=>{
                 mouseDown = false;
                 //tells the document 'pen is up'.
