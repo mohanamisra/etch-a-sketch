@@ -1,3 +1,7 @@
+/* Media queries start */
+
+/* Media queries end */
+
 html{
     height: 100%;
     width: 100%;
@@ -9,11 +13,7 @@ html{
     font-size: 8rem;
 }
 
-.input-section{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
+/* CSS Styles for the drawing section (the actual grid) */
 
 .set-grid{
     display: flex;
@@ -22,10 +22,9 @@ html{
 }
 
 .drawing-section{
+    display: flex;
     min-width: 100vw;
-    flex-direction: row-reverse;
-    justify-content: center;
-    gap: 16rem;
+    justify-content: space-evenly;
 }
 
 .grid{
@@ -46,6 +45,14 @@ html{
     border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
+/* CSS Styles for the buttons and other input sections */
+
+.input-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .hoveredWhite{
     background-color: rgb(255, 255, 255);
     box-shadow: 1px 1px 50px 1px rgba(255, 255, 255, 0.5);
@@ -54,11 +61,6 @@ html{
 .hoveredPurple{
     background-color: rgb(150, 60, 214);
     box-shadow: 1px 1px 50px 1px rgba(150, 60, 214, 50%);
-}
-
-.hoveredPink{
-    background-color: rgb(255, 57, 225);
-    box-shadow: 1px 1px 50px 1px rgba(255, 57, 225, 50%);
 }
 
 .hoveredGreen{
@@ -89,6 +91,8 @@ html{
 .btn:hover{
     background-color: none;
 }
+
+/* CSS Styles for miscellaneous elements */
 
 .footer{
     justify-content: center;
