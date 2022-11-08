@@ -46,14 +46,34 @@ html{
     border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
-.hovered{
-    background-color: white;
-    box-shadow: 1px 1px 50px 1px rgba(255, 255, 255, 50%);
+.hoveredWhite{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 50px 1px rgba(255, 255, 255, 0.5);
 }
 
 .hoveredPurple{
     background-color: rgb(150, 60, 214);
     box-shadow: 1px 1px 50px 1px rgba(150, 60, 214, 50%);
+}
+
+.hoveredPink{
+    background-color: rgb(255, 57, 225);
+    box-shadow: 1px 1px 50px 1px rgba(255, 57, 225, 50%);
+}
+
+.hoveredGreen{
+    background-color: rgb(95, 247, 131);
+    box-shadow: 1px 1px 50px 1px rgba(95, 247, 131, 50%);
+}
+
+.hoveredYellow{
+    background-color: rgb(254, 244, 56);
+    box-shadow: 1px 1px 50px 1px rgba(254, 244, 56, 50%);
+}
+
+.hoveredRed{
+    background-color: rgb(255, 80, 80);
+    box-shadow: 1px 1px 50px 1px rgba(255, 80, 80, 50%);
 }
 
 #white{

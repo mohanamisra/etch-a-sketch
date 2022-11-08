@@ -25,15 +25,34 @@ function createGrid(cellNum){
                 mouseDown = false;
                 //tells the document 'pen is up'.
             });
-            box.addEventListener('mouseover', (e)=>{
+            box.addEventListener('mouseenter', (e)=>{
                 if(isPurple)
                     hoveredPurple(e.target);
+                else if(isPink)
+                    hoveredPink(e.target);
+                else if(isGreen)
+                    hoveredGreen(e.target);
+                else if(isYellow)
+                    hoveredYellow(e.target);
+                else if(isRed)
+                    hoveredRed(e.target);
                 else
-                    hovered(e.target);
+                    hoveredWhite(e.target);
                 //if the box is hovered over then you pass that div to hovered and colour it. But hovered only colours if    mouseDown is true, i.e., only if th eprevious event listener (of mousedown) was fired on that div.
             });
             box.addEventListener('click', (e)=>{
-                clicked(e.target);
+                if(isPurple)
+                    clickedPurple(e.target);
+                else if(isPink)
+                    clickedPink(e.target);
+                else if(isGreen)
+                    clickedGreen(e.target);
+                else if(isYellow)
+                    clickedYellow(e.target);
+                else if(isRed)
+                    clickedRed(e.target);
+                else
+                    clickedWhite(e.target);
                 //handles colouring of simple clicked div.
             })
         }
@@ -42,30 +61,176 @@ function createGrid(cellNum){
     container.appendChild(grid);
 }
 
-function hovered(item){
-    if(mouseDown) //colours only if mouseDown is true, aka mousedown event was fired on target div.
-        item.classList.add("hovered");
+function hoveredWhite(item){
+    if(mouseDown){ //colours only if mouseDown is true, aka mousedown event was fired on target div.
+        item.classList.add("hoveredWhite");
+        item.classList.remove("hoveredPurple");
+        item.classList.remove("hoveredPink");
+        item.classList.remove("hoveredGreen");
+        item.classList.remove("hoveredYellow");
+        item.classList.remove("hoveredRed");
+    }
 }
 
-function clicked(item){
-    item.classList.add("hovered");
+function hoveredPurple(item){
+    if(mouseDown){
+        item.classList.remove("hoveredWhite");
+        item.classList.add("hoveredPurple");
+        item.classList.remove("hoveredPink");
+        item.classList.remove("hoveredGreen");
+        item.classList.remove("hoveredYellow");
+        item.classList.remove("hoveredRed");
+    }
+}
+function hoveredPink(item){
+    if(mouseDown){
+        item.classList.remove("hoveredWhite");
+        item.classList.remove("hoveredPurple");
+        item.classList.add("hoveredPink");
+        item.classList.remove("hoveredGreen");
+        item.classList.remove("hoveredYellow");
+        item.classList.remove("hoveredRed");
+    }
+}
+function hoveredGreen(item){
+    if(mouseDown){
+        item.classList.remove("hoveredWhite");
+        item.classList.remove("hoveredPurple");
+        item.classList.remove("hoveredPink");
+        item.classList.add("hoveredGreen");
+        item.classList.remove("hoveredYellow");
+        item.classList.remove("hoveredRed");
+    }
+}
+function hoveredYellow(item){
+    if(mouseDown){
+        item.classList.remove("hoveredWhite");
+        item.classList.remove("hoveredPurple");
+        item.classList.remove("hoveredPink");
+        item.classList.remove("hoveredGreen");
+        item.classList.add("hoveredYellow");
+        item.classList.remove("hoveredRed");
+    }
+}
+function hoveredRed(item){
+    if(mouseDown){
+        item.classList.remove("hoveredWhite");
+        item.classList.remove("hoveredPurple");
+        item.classList.remove("hoveredPink");
+        item.classList.remove("hoveredGreen");
+        item.classList.remove("hoveredYellow");
+        item.classList.add("hoveredRed");
+    }
+}
+
+function clickedWhite(item){
+    //colours only if mouseDown is true, aka mousedown event was fired on target div.
+        item.classList.add("hoveredWhite");
+        item.classList.remove("hoveredPurple");
+        item.classList.remove("hoveredPink");
+        item.classList.remove("hoveredGreen");
+        item.classList.remove("hoveredYellow");
+        item.classList.remove("hoveredRed");
+}
+function clickedPurple(item){
+        item.classList.remove("hoveredWhite");
+        item.classList.add("hoveredPurple");
+        item.classList.remove("hoveredPink");
+        item.classList.remove("hoveredGreen");
+        item.classList.remove("hoveredYellow");
+        item.classList.remove("hoveredRed");
+}
+function clickedPink(item){
+        item.classList.remove("hoveredWhite");
+        item.classList.remove("hoveredPurple");
+        item.classList.add("hoveredPink");
+        item.classList.remove("hoveredGreen");
+        item.classList.remove("hoveredYellow");
+        item.classList.remove("hoveredRed");
+}
+function clickedGreen(item){
+        item.classList.remove("hoveredWhite");
+        item.classList.remove("hoveredPurple");
+        item.classList.remove("hoveredPink");
+        item.classList.add("hoveredGreen");
+        item.classList.remove("hoveredYellow");
+        item.classList.remove("hoveredRed");
+}
+function clickedYellow(item){
+        item.classList.remove("hoveredWhite");
+        item.classList.remove("hoveredPurple");
+        item.classList.remove("hoveredPink");
+        item.classList.remove("hoveredGreen");
+        item.classList.add("hoveredYellow");
+        item.classList.remove("hoveredRed");
+}
+function clickedRed(item){
+        item.classList.remove("hoveredWhite");
+        item.classList.remove("hoveredPurple");
+        item.classList.remove("hoveredPink");
+        item.classList.remove("hoveredGreen");
+        item.classList.remove("hoveredYellow");
+        item.classList.add("hoveredRed");
 }
 
 //Get the colour buttons
-let whiteButton = document.getElementById("purple");
+let whiteButton = document.getElementById("white");
 let purpleButton = document.getElementById("purple");
-let pinkButton = document.getElementById("purple");
-let greenButton = document.getElementById("purple");
-let yellowButton = document.getElementById("purple");
-let redButton = document.getElementById("purple");
+let pinkButton = document.getElementById("pink");
+let greenButton = document.getElementById("green");
+let yellowButton = document.getElementById("yellow");
+let redButton = document.getElementById("red");
+let isWhite;
 let isPurple;
-purpleButton.addEventListener('click', ()=>{
-    isPurple = true;
+let isPink;
+let isGreen;
+let isYellow;
+let isRed;
+
+
+whiteButton.addEventListener('click', ()=>{
+    isPurple = false;
+    isPink = false;
+    isGreen = false;
+    isYellow = false;
+    isRed = false;
 });
 
-function hoveredPurple(){
-    item.classList.add("hoveredPurple");
-}
+purpleButton.addEventListener('click', ()=>{
+    isPurple = true;
+    isPink = false;
+    isGreen = false;
+    isYellow = false;
+    isRed = false;
+});
+pinkButton.addEventListener('click', ()=>{
+    isPurple = false;
+    isPink = true;
+    isGreen = false;
+    isYellow = false;
+    isRed = false;
+});
+greenButton.addEventListener('click', ()=>{
+    isPurple = false;
+    isPink = false;
+    isGreen = true;
+    isYellow = false;
+    isRed = false;
+});
+yellowButton.addEventListener('click', ()=>{
+    isPurple = false;
+    isPink = false;
+    isGreen = false;
+    isYellow = true;
+    isRed = false;
+});
+redButton.addEventListener('click', ()=>{
+    isPurple = false;
+    isPink = false;
+    isGreen = false;
+    isYellow = false;
+    isRed = true;
+});
 
 let input = document.getElementById("grid-size");
 let resizeButton = document.getElementById("resize-button");
