@@ -118,6 +118,7 @@ html{
 /* CSS Styles for miscellaneous elements */
 
 .footer{
+    display: flex;
     padding: 0.5rem;
     justify-content: space-around;
     align-items: center;
