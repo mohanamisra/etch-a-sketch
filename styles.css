@@ -118,5 +118,15 @@ html{
 /* CSS Styles for miscellaneous elements */
 
 .footer{
-    justify-content: center;
+    padding: 0.5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.footer-element:hover{
+    text-decoration: underline;
 }
