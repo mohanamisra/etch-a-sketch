@@ -234,10 +234,15 @@ redButton.addEventListener('click', ()=>{
 
 let input = document.getElementById("grid-size");
 let resizeButton = document.getElementById("resize-button");
+let clearButton = document.getElementById("clear-button");
 
 
 resizeButton.addEventListener('click', () => {
     gridSize = input.value;
+    newGrid(gridSize);
+});
+
+clearButton.addEventListener('click', ()=> {
     newGrid(gridSize);
 });
 
