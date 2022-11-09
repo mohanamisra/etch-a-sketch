@@ -9,7 +9,8 @@ Devlog:- (Dates in DD/MM/YYYY format)
 Started: [06/11/2022]  
 Resizable Grid Functionality Created: [07/11/2022]  
 Dark UI added: [07/11/2022]  
-Colour Options added: [08/11/2022]
+Colour Options added: [08/11/2022]  
+CODE REFACTORING(for mobile functionality). TAKEN DOWN: [09/11/2022]
 
 Checkout the page yourself!
 <a href = "https://mohanamisra.github.io/etch-a-sketch/">Galactic Etch-A-Sketch</a>
