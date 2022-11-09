@@ -12,7 +12,4 @@ Dark UI added: [07/11/2022]
 Colour Options added: [08/11/2022]  
 CODE REFACTORING(for mobile functionality). TAKEN DOWN: [09/11/2022]
 
-Checkout the page yourself!
-<a href = "https://mohanamisra.github.io/etch-a-sketch/">Galactic Etch-A-Sketch</a>
-
 Tech/Framework used - HTML, CSS (Bootstrap), Vanilla Javascript
