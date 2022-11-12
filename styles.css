@@ -1,0 +1,15 @@
+.grid{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    border: 1px solid white;
+}
+
+.column{
+    flex-grow: 1;
+}
+
+.box{
+    border: 1px solid white;
+    flex-grow: 1;
+}
