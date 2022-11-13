@@ -13,5 +13,6 @@ Colour Options added: [08/11/2022]
 CODE REFACTORING(for mobile functionality). TAKEN DOWN: [09/11/2022]  
 ---x---x---x---  
 Added basic grid: [12/11/2022]
+Resizable Grid Functionality Created: [13/11/2022]
 
 Tech/Framework used - HTML, CSS (Bootstrap), Vanilla Javascript
