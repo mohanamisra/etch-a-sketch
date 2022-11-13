@@ -140,7 +140,17 @@ function addEventListeners(){
         eachBox.addEventListener('click', (e)=>{
             let boxToColour = e.target;
             colour(boxToColour);
-        })
+        });
+        eachBox.addEventListener('touchmove', (e)=>{
+            e.preventDefault();
+            let myLocation = e.changedTouches[0];
+                let realTarget = document.elementFromPoint(
+                myLocation.clientX,
+                myLocation.clientY
+                );
+                if (realTarget.classList.contains("box"))
+                    colour(realTarget);
+        });
     }
 }
 
@@ -194,3 +204,21 @@ function colour(boxToColour){
             boxToColour.classList.remove("colour-red");
     }
 }
+
+
+
+
+
+
+//THIS IS CODE FOR TOUCH (NOT MINE)
+//----------------------------------
+// pixelContainer.addEventListener("touchmove", function (e) {
+//     e.preventDefault();
+//     let myLocation = e.changedTouches[0];
+//     let realTarget = document.elementFromPoint(
+//       myLocation.clientX,
+//       myLocation.clientY
+//     );
+//     if (realTarget.classList.contains("sqr")) colorChange(realTarget);
+//   });
+//----------------------------------
