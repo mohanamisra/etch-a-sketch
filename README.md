@@ -17,4 +17,7 @@ Resizable Grid Functionality Created: [13/11/2022]
 Colour Options added: [13/11/2022]  
 Touch Functionality added: [13/11/2022]
 
+Check out the page here!
+<a href = "https://mohanamisra.github.io/etch-a-sketch/">Etch-A-Sketch (Galactic Edition)</a>
+
 Tech/Framework used - HTML, CSS (Bootstrap), Vanilla Javascript
