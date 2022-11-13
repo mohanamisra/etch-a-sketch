@@ -1,4 +1,43 @@
+.container{
+    min-width: 100vw;
+}
+
+.heading{
+    width: 100vw;
+    text-align: center;
+    font-size: 6rem;
+}
+
+.heading.subtext{
+    font-size: 3rem;
+}
+
+.drawing-section{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around  ;
+}
+
+.colour-button{
+    height: 2.5rem;
+    font-size: 1.25rem;
+}
+
+.resize-section{
+    display: flex;
+    gap: 1rem;
+}
+
 .grid{
+    /* HOW WAS THE GRID MADE RESIZABLE?
+        Well, if the grid itself is display:flex, then the columns get appended horizontally. Then you give flex grow of 1 to the columns(to occupy the vertical space). But that was appending only n number of straight columns (instead of a nxn grid). The reason was that column's flex direction was row. On changing it to column, it functioned as a grid again. Then you give flex grow ofo 1 to the boxes too (to occupy the horizontal space). */
+
     display: flex;
     width: 500px;
     height: 500px;
