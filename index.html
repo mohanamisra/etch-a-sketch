@@ -11,7 +11,7 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
-    <div class = "container p-0 m-0">
+    <div class = "container p-5 pt-0 m-0">
         <!-- This is the bootstrap container for responsiveness -->
 
         <!-- Header starts -->
@@ -21,24 +21,26 @@
 
         <!-- Drawing section starts -->
         <div class = "drawing-section">
-            <div class = "buttons">
-                <div>
-                    <button type = "button" class = "btn btn-primary colour-button shadow-none" id = "white-button">White</button>
-                </div>
-                <div id = "purple">
-                    <button type = "button" class = "btn btn-primary colour-button shadow-none" id = "purple-button">Purple</button>
-                </div>
-                <div id = "green">
-                    <button type = "button" class = "btn btn-success colour-button shadow-none" id = "green-button">Green</button>
-                </div>
-                <div id = "blue">
-                    <button type = "button" class = "btn btn-info colour-button shadow-none" id = "blue-button">Blue</button>
-                </div>
-                <div id = "yellow">
-                    <button type = "button" class = "btn btn-warning colour-button shadow-none" id = "yellow-button">Yellow</button>
-                </div>
-                <div id = "red">
-                    <button type = "button" class = "btn btn-danger colour-button shadow-none" id = "red-button">Red</button>
+            <div class = "buttons all">
+                <div class = "button-section">
+                    <div>
+                        <button type = "button" class = "btn btn-primary colour-button shadow-none" id = "white-button">White</button>
+                    </div>
+                    <div id = "purple">
+                        <button type = "button" class = "btn btn-primary colour-button shadow-none" id = "purple-button">Purple</button>
+                    </div>
+                    <div id = "green">
+                        <button type = "button" class = "btn btn-success colour-button shadow-none" id = "green-button">Green</button>
+                    </div>
+                    <div id = "blue">
+                        <button type = "button" class = "btn btn-info colour-button shadow-none" id = "blue-button">Blue</button>
+                    </div>
+                    <div id = "yellow">
+                        <button type = "button" class = "btn btn-warning colour-button shadow-none" id = "yellow-button">Yellow</button>
+                    </div>
+                    <div id = "red">
+                        <button type = "button" class = "btn btn-danger colour-button shadow-none" id = "red-button">Red</button>
+                    </div>
                 </div>
                 <div class = "resize-section">
                     <input type = "number" class = "input-grid-size" placeholder="Enter Grid Size">
@@ -53,12 +55,12 @@
     </div>
     <footer class="footer bg-dark p-3">
         <div>
-            Attributes
+            <a href = "attributes.html">Attributes</a>
         </div>
         <div>
             &#169; Made by Mohana Misra (2022)
         </div>
-        <div>
+        <div id = "sound-button">
             Play/Pause Audio
         </div>
     </footer>

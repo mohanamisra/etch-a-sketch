@@ -9,6 +9,7 @@
         margin-top: 2rem;
         min-width: 100%;
     }
+
     .drawing-section{
         /* border: 10px solid red; */
         flex-direction: column-reverse;
@@ -18,14 +19,20 @@
         /* border: 10px solid red; */
         align-self: center;
         padding: 3rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         min-height: 650px;
         min-width: 650px;
     }
 
-    .buttons{
-        gap: 2rem;
+    .buttons.all{
+        display: flex;
+        flex-direction: row;
         align-items: center;
+        margin-bottom: 3rem;
+    }
+
+    .resize-section{
+        align-self: flex-end;
     }
 
     .colour-button{
@@ -66,6 +73,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly  ;
+}
+
+.button-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .colour-button{
@@ -142,4 +155,8 @@
     align-items: center;
     position: fixed;
     bottom: 0;
+}
+
+a{
+    text-decoration: none;
 }
