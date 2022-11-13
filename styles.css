@@ -30,6 +30,11 @@
     font-size: 1.25rem;
 }
 
+#white-button{
+    background-color: white;
+    color: black;
+}
+
 .resize-section{
     display: flex;
     gap: 1rem;
@@ -58,4 +63,5 @@
 
 .colour{
     background-color: white;
+    box-shadow: 2px 2px 15px 5px rgba(255, 255, 255, 0.3);
 }
