@@ -9,19 +9,20 @@
 }
 
 .heading.subtext{
-    font-size: 3rem;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
 }
 
 .drawing-section{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
 }
 
 .buttons{
     display: flex;
     flex-direction: column;
-    justify-content: space-around  ;
+    justify-content: space-evenly  ;
 }
 
 .colour-button{
@@ -53,4 +54,8 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
     /* max-width: 100%; */
     flex-grow: 1;
+}
+
+.colour{
+    background-color: white;
 }
