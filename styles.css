@@ -1,4 +1,47 @@
+/* Media Queries start */
+
+@media(max-width: 768px){
+    html, body{
+        min-width: 768px;
+    }
+
+    .heading{
+        margin-top: 2rem;
+        min-width: 100%;
+    }
+    .drawing-section{
+        /* border: 10px solid red; */
+        flex-direction: column-reverse;
+    }
+    
+    .grid{
+        /* border: 10px solid red; */
+        align-self: center;
+        padding: 3rem;
+        margin-bottom: 3rem;
+        min-height: 650px;
+        min-width: 650px;
+    }
+
+    .buttons{
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .colour-button{
+        height: 3rem;
+        font-size: 2rem;
+    }
+}
+
+/* Media Queries end */
+
+
 .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
     min-width: 100vw;
 }
 
@@ -45,8 +88,8 @@
         Well, if the grid itself is display:flex, then the columns get appended horizontally. Then you give flex grow of 1 to the columns(to occupy the vertical space). But that was appending only n number of straight columns (instead of a nxn grid). The reason was that column's flex direction was row. On changing it to column, it functioned as a grid again. Then you give flex grow ofo 1 to the boxes too (to occupy the horizontal space). */
 
     display: flex;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
 }
 
 .column{
@@ -89,4 +132,14 @@
 .colour-red{
     background-color: rgb(255, 60, 60);
     box-shadow: 2px 2px 15px 5px rgba(255, 60, 60, 0.5);
+}
+
+.footer{
+    min-width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
 }

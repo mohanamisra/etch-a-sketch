@@ -116,7 +116,10 @@ function createGrid(gridSize){
 // CLEAR BUTTON FUNCTIONALITY
 clearButton.addEventListener('click', ()=>{
     grid.innerHTML = "";
-    createGrid(gridSize);
+    if(isNaN(gridSize))
+        createGrid(16);
+    else
+        createGrid(gridSize);
     addEventListeners();
 });
 
