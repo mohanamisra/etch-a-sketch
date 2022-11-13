@@ -61,7 +61,32 @@
     flex-grow: 1;
 }
 
-.colour{
+.colour-white{
     background-color: white;
-    box-shadow: 2px 2px 15px 5px rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 15px 5px rgba(255, 255, 255, 0.5);
+}
+
+.colour-purple{
+    background-color: rgb(185, 33, 226);
+    box-shadow: 2px 2px 15px 5px rgba(185, 33, 226, 0.5);
+}
+
+.colour-green{
+    background-color: rgb(37, 255, 95);
+    box-shadow: 2px 2px 15px 5px rgba(37, 255, 95, 0.5);
+}
+
+.colour-blue{
+    background-color: rgb(41, 162, 255);
+    box-shadow: 2px 2px 15px 5px rgba(41, 162, 255, 0.5);
+}
+
+.colour-yellow{
+    background-color: rgb(254, 239, 31);
+    box-shadow: 2px 2px 15px 5px rgba(254, 239, 31, 0.5);
+}
+
+.colour-red{
+    background-color: rgb(255, 60, 60);
+    box-shadow: 2px 2px 15px 5px rgba(255, 60, 60, 0.5);
 }
