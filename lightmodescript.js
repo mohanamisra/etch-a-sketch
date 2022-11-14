@@ -54,7 +54,7 @@ function createGrid(gridSize){
         column.classList.add("column");
         for(let j = 1; j <= gridSize; j++){
             box = document.createElement("div");
-            box.classList.add("box");
+            box.classList.add("box-light-mode");
             column.appendChild(box);
         }
         grid.appendChild(column);
@@ -73,7 +73,7 @@ clearButton.addEventListener('click', ()=>{
 
 
 function addEventListeners(){
-    let boxes = document.getElementsByClassName("box");
+    let boxes = document.getElementsByClassName("box-light-mode");
     for(let eachBox of boxes){
         eachBox.addEventListener('mousedown', (e)=>{
             e.preventDefault();
