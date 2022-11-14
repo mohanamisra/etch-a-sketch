@@ -176,3 +176,11 @@ a{
 }
 
 /* Attributes page specific styling ends */
+
+/* Navbar styling */
+
+.active{
+    text-decoration: underline;
+}
+
+/* Navbar styling ends */
