@@ -117,10 +117,12 @@ function addEventListeners(){
 
 function colour(boxToColour){
     if(blue){
+        boxToColour.style.backgroundColor = "";
         boxToColour.classList.add("colour-blue");
         boxToColour.classList.remove("colour-red");
     }
     else if(red){
+        boxToColour.style.backgroundColor = "";
         boxToColour.classList.remove("colour-blue");
         boxToColour.classList.add("colour-red");
     }
