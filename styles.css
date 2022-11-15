@@ -11,12 +11,10 @@
     }
 
     .drawing-section{
-        /* border: 10px solid red; */
         flex-direction: column-reverse;
     }
     
     .grid{
-        /* border: 10px solid red; */
         align-self: center;
         padding: 3rem;
         margin-bottom: 2rem;

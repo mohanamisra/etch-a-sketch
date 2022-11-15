@@ -11,6 +11,8 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
+    <audio autoplay src = "music/SpaceAge(AleXZavesa).mp3" id = "audio">
+    </audio>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class = "container-fluid">
             <button class="navbar-toggler shadow-none" type = "button" data-bs-toggle="collapse" data-bs-target="#navmenu">
@@ -19,50 +21,59 @@
             <div class="collapse navbar-collapse" id = "navmenu">
                 <ul class="navbar-nav">
                     <li class = "nav-item">
-                        <a href = "lightmode.html" class = "nav-link">The Light Side</a>
+                        <a href = "index.html" class = "nav-link active">The Light Side</a>
                     </li>
                     <li class = "nav-item">
-                        <a href = "darkmode.html" class = "nav-link active">The Dark Side</a>
+                        <a href = "darkmode.html" class = "nav-link">The Dark Side</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class = "container p-5 pt-0 m-0">
+    <div class = "container light-mode p-5 pt-0 m-0">
         <!-- This is the bootstrap container for responsiveness -->
 
         <!-- Header starts -->
-        <h1 class = "heading main">Etch-A-Sketch</h1>
-        <h6 class = "heading subtext">(Galactic Edition)</h6>
+        <h1 class = "heading main light-mode">Etch-A-Sketch</h1>
+        <h6 class = "heading subtext light-mode">(Galactic Edition)</h6>
         <!-- Headers ends -->
 
         <!-- Drawing section starts -->
         <div class = "drawing-section">
             <div class = "buttons all">
-                <div class = "button-section">
+                <div class = "button-section button-section-light-mode">
                     <div>
-                        <button type = "button" class = "btn btn-primary colour-button shadow-none" id = "white-button">White</button>
+                        <button type = "button" class = "btn btn-primary colour-button shadow-none d-none" id = "white-button">White</button>
                     </div>
                     <div id = "purple">
-                        <button type = "button" class = "btn btn-primary colour-button shadow-none" id = "purple-button">Purple</button>
+                        <button type = "button" class = "btn btn-primary colour-button shadow-none d-none" id = "purple-button">Purple</button>
                     </div>
                     <div id = "green">
-                        <button type = "button" class = "btn btn-success colour-button shadow-none" id = "green-button">Green</button>
+                        <button type = "button" class = "btn btn-success colour-button shadow-none d-none" id = "green-button">Green</button>
                     </div>
                     <div id = "blue">
-                        <button type = "button" class = "btn btn-info colour-button shadow-none" id = "blue-button">Blue</button>
+                        <button type = "button" class = "btn btn-info colour-button shadow-none d-none" id = "blue-button">Blue</button>
                     </div>
                     <div id = "yellow">
-                        <button type = "button" class = "btn btn-warning colour-button shadow-none" id = "yellow-button">Yellow</button>
+                        <button type = "button" class = "btn btn-warning colour-button shadow-none d-none" id = "yellow-button">Yellow</button>
                     </div>
                     <div id = "red">
-                        <button type = "button" class = "btn btn-danger colour-button shadow-none" id = "red-button">Red</button>
+                        <button type = "button" class = "btn btn-danger colour-button shadow-none d-none" id = "red-button">Red</button>
+                    </div>
+                    <div id = "blue">
+                        <button type = "button" class = "btn btn-info colour-button shadow-none" id = "blue-button-light-mode">Blue</button>
+                    </div>
+                    <div id = "red">
+                        <button type = "button" class = "btn btn-danger colour-button shadow-none" id = "red-button-light-mode">Red</button>
+                    </div>
+                    <div id = "multi-colour">
+                        <button type = "button" class = "btn btn-primary colour-button shadow-none" id = "multi-colour-button">May the Force...</button>
                     </div>
                 </div>
                 <div class = "resize-section">
                     <input type = "number" class = "input-grid-size" placeholder="Enter Grid Size">
-                    <button type = "button" class = "btn btn-outline-light shadow-none" id = "resize-button">Resize</button>
-                    <button type = "button" class = "btn btn-outline-light shadow-none" id = "clear-button">Clear</button>
+                    <button type = "button" class = "btn btn-dark shadow-none" id = "resize-button">Resize</button>
+                    <button type = "button" class = "btn btn-dark shadow-none" id = "clear-button">Clear</button>
                 </div>
             </div>
             <div class = "grid">
@@ -77,12 +88,13 @@
         <div>
             &#169; Made by Mohana Misra (2022)
         </div>
-        <div id = "sound-button">
+        <div id = "audio-button" type = "button">
             Play/Pause Audio
         </div>
     </footer>
     <!-- JS Scripts section starts -->
-    <script src = "script.js"></script>
+    <script src = "lightmodescript.js"></script>
+    <script src = "audioplay.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- JS Scripts section ends -->

@@ -135,7 +135,7 @@ function colour(boxToColour){
 function colourGenerate(){
     let rValue = Math.floor(Math.random() * (255 - 0 + 1) + 0);
     let gValue = Math.floor(Math.random() * (255 - 0 + 1) + 0);
-    let bValue = Math.floor(Math.random() * (255 - 0 + 1) + 0);
+    let bValue = Math.floor(Math.random() * (255 - 155 + 1) + 155);
     
     return `${rValue}, ${gValue}, ${bValue}`;
 }
