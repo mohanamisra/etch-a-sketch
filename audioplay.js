@@ -2,9 +2,7 @@ let audioButton = document.getElementById("audio-button");
 let backgroundMusic = document.getElementById("audio");
 let muteButton;
 let playButton;
-let navbar = document.getElementsByClassName("navbar")[0];
 
-navbar.addEventListener('click', playMusic);
 audioButton.addEventListener('click', playMusic);
 
 function stopMusic(){
