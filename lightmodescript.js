@@ -3,8 +3,9 @@ let column;
 let box;
 let gridSize;
 let colourName;
-let blue;
+let blue = true;
 let red;
+let multicolour;
 let mouseDown = false;
 
 //variables for functioning of the page
@@ -14,18 +15,27 @@ let clearButton = document.getElementById("clear-button");
 let input = document.getElementsByClassName("input-grid-size")[0];
 
 // Getting the buttons
-let blueButton = document.getElementById("blue-button");
-let redButton = document.getElementById("red-button");
+let blueButton = document.getElementById("blue-button-light-mode");
+let redButton = document.getElementById("red-button-light-mode");
+let multicolourButton = document.getElementById("multi-colour-button");
 
 blueButton.addEventListener('click', ()=>{
     blue = true;
     red = false;
+    multicolour = false;
 });
 
 redButton.addEventListener('click', ()=>{
     blue = false;
     red = true;
+    multicolour = false;
 });
+
+multicolourButton.addEventListener('click', () => {
+    blue = false;
+    red = false;
+    multicolour = true;
+})
 
 createGrid(16); //This is the default grid size when the page loads
 addEventListeners();
@@ -99,7 +109,7 @@ function addEventListeners(){
                 myLocation.clientX,
                 myLocation.clientY
                 );
-                if (realTarget.classList.contains("box"))
+                if (realTarget.classList.contains("box-light-mode"))
                     colour(realTarget);
         });
     }
@@ -114,8 +124,21 @@ function colour(boxToColour){
         boxToColour.classList.remove("colour-blue");
         boxToColour.classList.add("colour-red");
     }
+    else if(multicolour){
+        boxToColour.classList.remove("colour-blue");
+        boxToColour.classList.remove("colour-red");
+        boxToColour.style.backgroundColor = `rgb(${colourGenerate()})`;
+        boxToColour.classList.add("multi-colour");
+    }
 }
 
+function colourGenerate(){
+    let rValue = Math.floor(Math.random() * (255 - 0 + 1) + 0);
+    let gValue = Math.floor(Math.random() * (255 - 0 + 1) + 0);
+    let bValue = Math.floor(Math.random() * (255 - 0 + 1) + 0);
+    
+    return `${rValue}, ${gValue}, ${bValue}`;
+}
 
 
 
