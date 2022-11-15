@@ -16,9 +16,11 @@ Added basic grid: [12/11/2022]
 Resizable Grid Functionality Created: [13/11/2022]  
 Colour Options added: [13/11/2022]  
 Touch Functionality added: [13/11/2022]  
-Light UI added: [15/11/2022]
+Light UI added: [15/11/2022]  
+Background Music and audio controls added: [15/11/2022]  
 
-Check out the page here!
+
+### Check out the page here!
 <a href = "https://mohanamisra.github.io/etch-a-sketch/">Etch-A-Sketch (Galactic Edition)</a>
 
 Tech/Framework used - HTML, CSS (Bootstrap), Vanilla Javascript
